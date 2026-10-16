@@ -3,11 +3,30 @@
 }
 body{
     background-color: #e6e3e2;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+body.fondoOscuro{
+    background-color: black;
+    color: #e6e3e2;
+}
+
+body.fondoOscuro #colorVerificado{
+    color: black;
+}
+
+.cajitaFoto{
+    position: relative;
+}
 .fotoDigital{
     border-radius: 20px;
     border: 10px solid red;
+}
+
+.insignia{
+    position: absolute;
+    top: 2%;
+    left: 77%;
 }
 
 h1,h2,p {
@@ -21,5 +40,19 @@ h1,h2,p {
     align-items: flex-start;
     gap: 100px;
     align-items: center;
+    height: 90vh
 }
 
+.cajitaFoto::after{
+    content: "ONLINE";
+    position: absolute;
+    top: 95.5%;
+    left: 82.5%;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body.fondoOscuro .cajitaFoto{
+    color: black;
+}
